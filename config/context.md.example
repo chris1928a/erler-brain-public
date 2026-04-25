@@ -1,0 +1,28 @@
+# Brain — Personal Context (example)
+
+Copy this to `context.md` and customize for your own setup. The Brain loads this as background context
+for AI calls, so it knows who you are and how you want to communicate.
+
+## About me
+- Name: [Your name]
+- Role: [Founder / Operator / Advisor / etc.]
+- Company: [Your venture]
+
+## Ventures & Contacts
+- **[Venture 1]**: [One-line description, key people]
+- **[Venture 2]**: [One-line description, key people]
+- **Lawyer**: [Name, firm, when to use formal tone]
+
+## Writing Style
+- [Direct / formal / casual / etc.]
+- [Avoid filler words like "actually", "basically"]
+- [Language preference: English / German / both]
+
+## Email Conventions
+- To [contact group A]: Formal address, Sir/Madam
+- To [contact group B]: Informal, first-name basis
+- Sign-off: [Best / Cheers / Mit besten Gruessen / etc.]
+
+## Known Projects (the Brain may search these)
+- [Project name]: [Drive folder / repo / Notion page]
+- [Project name]: [Drive folder / repo / Notion page]

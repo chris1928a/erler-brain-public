@@ -1,0 +1,51 @@
+# Secrets — NEVER commit
+.env
+.env.local
+.env.production
+*.pem
+*.key
+token.json
+credentials.json
+service-account*.json
+google-credentials.json
+
+# Personal config (copy from .example files and customize locally)
+config/rules.yaml
+config/context.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# RAG index (built locally from your own docs)
+.chunks/
+*.faiss
+*.pkl
+data/
+sources/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts
+build/
+dist/
+lambda_build/

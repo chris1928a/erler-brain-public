@@ -1,0 +1,59 @@
+# Erler Brain — Routing Rules (example)
+# Copy this to rules.yaml and edit for your own setup.
+
+routing:
+  default_model: gemini-flash
+  high_stakes_model: claude-sonnet-4-6
+
+contacts:
+  # High-stakes contacts trigger Claude Sonnet for drafts (more careful reasoning)
+  high_stakes:
+    - name: "Your Lawyer"
+      context: "Legal counsel, contracts, compliance"
+      mode: draft_approve
+      model: claude-sonnet-4-6
+
+    - name: "Co-Founder"
+      context: "Business partner, strategic decisions"
+      mode: draft_approve
+      model: claude-sonnet-4-6
+
+    - name: "Investor"
+      context: "Capital partners, board members"
+      mode: draft_approve
+      model: claude-sonnet-4-6
+
+  # Auto-reply patterns for low-stakes inbound
+  auto_reply:
+    - pattern: "Newsletter*"
+      model: gemini-flash
+      template: polite_decline
+      max_auto_replies: 3
+
+    - pattern: "Meeting request"
+      model: gemini-flash
+      action: check_calendar_and_suggest
+
+  # Notify-only: just send a Telegram summary, no auto-action
+  notify_only:
+    - pattern: "*"
+      summary_to: telegram
+
+tasks:
+  # Keywords that escalate any message to Claude (high-stakes path)
+  high_stakes_keywords:
+    - "Contract"
+    - "Invoice"
+    - "Investment"
+    - "Termination"
+    - "NDA"
+    - "Shareholder agreement"
+    - "Notary"
+
+  # Quick patterns that stay on the cheap model
+  low_stakes_keywords:
+    - "Meeting"
+    - "Thanks"
+    - "OK"
+    - "When"
+    - "Where"

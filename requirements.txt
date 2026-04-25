@@ -1,0 +1,14 @@
+python-telegram-bot==21.*
+python-dotenv
+anthropic
+google-genai
+google-api-python-client
+google-auth
+google-auth-oauthlib
+boto3
+faiss-cpu
+numpy
+pyyaml
+requests
+aiohttp
+feedparser
